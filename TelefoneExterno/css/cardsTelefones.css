@@ -1,0 +1,261 @@
+:root {
+  --azulPmfEscuro: #002f66;
+  --pretoPmf: black;
+  --azulPmfClaro: #0093d4;
+  --brancoPmf: #ffffff;
+  --azure: azure;
+  --azulGradiante: linear-gradient(var(--azulPmfEscuro), var(--azulPmfClaro));
+  --fontePadrao: "Montserrat", sans-serif;
+}
+
+/* PESQUISA */
+
+.input-container {
+  position: relative;
+  display: inline-block;
+}
+
+#pesquisa {
+  font-family: var(--fonteTitulos);
+  font-size: 1rem;
+  height: 35px;
+  width: 150px;
+  padding: 10px;
+  padding-left: 30px;
+  border: 1px solid var(--cinzaPmf);
+  border-radius: 5px;
+  padding-right: 30px;
+}
+
+.material-symbols-outlined {
+  position: absolute;
+  top: 60%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 30px;
+  /* Largura do ícone */
+  height: 30px;
+  /* Altura do ícone */
+  color: var(--cinzaPmf);
+}
+
+.maisRamais {
+  position: relative;
+  right: auto;
+  margin-left: 30px;
+  transform: none;
+  width: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fontePadrao);
+  /* overflow: hidden; */
+}
+
+h1 {
+  color: var(--azulPmfEscuro);
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 40px;
+}
+
+.ajustSectionUm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: var(--azulPmfEscuro);
+}
+
+.CardSecretaria h3 {
+  color: var(--azulPmfClaro);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.CardSecretaria h4 {
+  color: rgb(100, 100, 100);
+  font-weight: 400;
+  margin: 0;
+}
+
+.alinharCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.listaRamal {
+  margin-top: 1rem;
+  cursor: pointer;
+  width: max-content;
+  position: relative;
+}
+
+.ramalSetor {
+  margin: 1px;
+}
+
+.bordasDosCards {
+  font-weight: bolder;
+  width: 8.2rem;
+  border: 2px solid var(--azulPmfEscuro);
+  border-radius: 25px;
+  padding: 5px 30px 5px 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+/* .content {
+    display: none;
+    margin-top: 10px;
+    padding: 15px;
+
+}
+
+.sub-content {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+
+} */
+
+.CardSecretaria {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.content {
+  display: none;
+  width: 100%;
+
+  background-color: var(--brancoPmf);
+  padding-left: 15px;
+  z-index: 2;
+}
+
+.sub-content {
+  display: none;
+
+  background-color: var(--brancoPmf);
+  padding-left: 10px;
+  z-index: 2;
+}
+
+.expansaoContainer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  /* Ajuste o valor conforme necessário */
+}
+
+.coluna1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.coluna2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.listaRamal p,
+.ramalFuncionario {
+  color: rgb(100, 100, 100);
+  font-weight: 500;
+  margin: 0;
+}
+
+.ramalSetor p {
+  color: var(--azulPmfClaro);
+  margin: 15px 0 15px 0;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+.cargoFuncionario {
+  color: rgb(100, 100, 100);
+  font-weight: 400;
+  padding: 2px 0 2px 0;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.nomeFuncionario {
+  color: var(--pretoPmf);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.bordasDosCards:hover {
+  color: var(--azulPmfClaro);
+  border: 2px solid var(--azulPmfClaro);
+}
+
+.listaRamal p:hover {
+  color: var(--pretoPmf);
+}
+
+.ramalSetor p:hover {
+  color: var(--azulGradiante);
+}
+
+hr {
+  color: rgb(184, 184, 184);
+}
+
+#atendimentoEspaco {
+  margin-bottom: 10px;
+}
+
+#atendimentoEspaco b {
+  color: var(--azulPmfEscuro);
+}
+
+/*.testeZoom{
+  transition: transform .4s;  Animation 
+}*/
+
+/* .testeZoom:hover{
+  transform: scale(1.1);
+} */
+
+@media only screen and (max-width: 500px) {
+  .logo {
+    margin-left: -20%;
+  }
+
+  .ajustSectionUm {
+    flex-direction: column;
+    margin: 0 15% 0 15%;
+  }
+
+  .coluna1 {
+    text-align: center;
+  }
+
+  .coluna2 {
+    text-align: center;
+  }
+
+  .CardSecretaria {
+    align-items: center;
+  }
+
+  .bordasDosCards {
+    width: auto;
+  }
+
+  .listaRamal {
+    width: auto;
+    text-align: center;
+  }
+
+  .content {
+    padding: 0;
+    text-align: center;
+  }
+}
